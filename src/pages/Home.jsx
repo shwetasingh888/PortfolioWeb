@@ -48,7 +48,7 @@ export default function Home() {
           </motion.a>
 
           <motion.a 
-            href="/public/resume.pdf"
+            href="/resume.pdf"
             download
             className="flex items-center justify-center gap-2 bg-white text-primary px-6 py-3 rounded-full shadow hover:bg-gray-200"
             whileHover={{ scale: 1.05 }}
