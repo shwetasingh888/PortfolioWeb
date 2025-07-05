@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import profile from "../assets/profile.jpg"; // adjust name if you used different
+import { FaDownload } from "react-icons/fa";
+import profile from "../assets/profile.jpg"; // adjust if you named differently
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         >
           Hi, I'm Shweta
         </motion.h1>
+        
         <motion.p 
           className="text-lg md:text-2xl mb-8 max-w-xl"
           initial={{ opacity: 0 }}
@@ -33,13 +35,34 @@ export default function Home() {
         >
           A passionate frontend developer crafting beautiful & modern web apps.
         </motion.p>
-        <motion.a 
-          href="/projects"
-          className="bg-white text-primary px-6 py-3 rounded-full shadow-lg hover:bg-gray-200"
-          whileHover={{ scale: 1.05 }}
+
+        {/* Buttons container */}
+        <motion.div 
+          className="flex flex-col md:flex-row gap-4 justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.8 }}
         >
-          View My Work
-        </motion.a>
+          {/* View My Work button */}
+          <motion.a 
+            href="/projects"
+            className="bg-white text-primary px-6 py-3 rounded-full shadow-lg hover:bg-gray-200"
+            whileHover={{ scale: 1.05 }}
+          >
+            View My Work
+          </motion.a>
+
+          {/* Download Resume button */}
+          <motion.a 
+            href="/src/assets/resume.pdf"
+            download
+            className="flex items-center justify-center gap-2 bg-white text-primary px-6 py-3 rounded-full shadow-lg hover:bg-gray-200"
+            whileHover={{ scale: 1.05 }}
+          >
+            <FaDownload />
+            Download Resume
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

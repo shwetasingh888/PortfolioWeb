@@ -1,0 +1,9 @@
+When you make changes:
+Just:
+
+bash
+
+git add .
+git commit -m "update something"
+git push
+✅ Vercel auto-rebuilds & redeploys!
