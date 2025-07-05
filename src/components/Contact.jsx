@@ -14,7 +14,7 @@ export default function Contact() {
       <h2 className="text-3xl font-bold mb-4 text-primary">Contact Me</h2>
       
       <form 
-        action="https://formspree.io/f/yourformid" 
+        action="https://formspree.io/f/myzjajgw" 
         method="POST" 
         className="max-w-md mx-auto flex flex-col gap-4 mb-8"
       >
