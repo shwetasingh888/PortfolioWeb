@@ -5,5 +5,5 @@ bash
 
 git add .
 git commit -m "update something"
-git push
+git push origin main
 ✅ Vercel auto-rebuilds & redeploys!
