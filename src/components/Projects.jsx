@@ -4,31 +4,31 @@ export default function Projects() {
   const projects = [
     {
       title: "LMS Website",
-      description: "Responsive React & Tailwind portfolio.",
+      description: "Modern React & LMS.",
       link: "https://github.com/shwetasingh888/portfolio"
     },
     {
-      title: "Other Project",
-      description: "Another cool project.",
+      title: "Sample Project",
+      description: "Another project description.",
       link: "#"
     }
   ];
 
   return (
-    <motion.section 
-      id="projects" 
+    <motion.section
+      id="projects"
       className="py-20 px-4 bg-white text-center"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.8 }}
     >
       <h2 className="text-3xl font-bold mb-8 text-primary">Projects</h2>
       <div className="flex flex-col md:flex-row justify-center gap-8">
         {projects.map((project, idx) => (
-          <motion.div 
+          <motion.div
             key={idx}
-            className="bg-accent rounded shadow p-6 w-full md:w-80 hover:scale-105 transition"
+            className="bg-accent rounded-2xl shadow-md p-6 w-full md:w-80 hover:scale-105 transition"
             whileHover={{ scale: 1.05 }}
           >
             <h3 className="text-xl font-semibold mb-2 text-secondary">{project.title}</h3>

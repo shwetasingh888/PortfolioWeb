@@ -17,29 +17,28 @@ export default function About() {
   ];
 
   return (
-    <motion.section 
-      id="about" 
+    <motion.section
+      id="about"
       className="py-20 px-4 bg-accent text-center"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.8 }}
     >
       <h2 className="text-3xl font-bold mb-4 text-primary">About Me</h2>
       <p className="max-w-2xl mx-auto text-gray-700 mb-8">
-        I’m Shweta, a frontend developer skilled in modern web technologies. Motivated fresher with a strong foundation in SQL for managing and querying relational databases. Skilled in front-end development using React Native and React with Vite and Tailwind CSS to create responsive and user-friendly applications. Comfortable using GitHub for version control and project collaboration.
+         I’m Shweta, a frontend developer skilled in modern web technologies. Motivated fresher with a strong foundation in SQL for managing and querying relational databases. Skilled in front-end development using React Native and React with Vite and Tailwind CSS to create responsive and user-friendly applications. Comfortable using GitHub for version control and project collaboration.
       </p>
-
-      <h3 className="text-2xl font-semibold mb-4 text-secondary">Skills</h3>
+      <h3 className="text-2xl font-semibold mb-6 text-secondary">My Skills</h3>
       <div className="flex flex-wrap justify-center gap-6">
         {skills.map((skill, idx) => (
-          <motion.div 
+          <motion.div
             key={idx}
-            className="flex flex-col items-center bg-white rounded shadow p-4 w-24 hover:scale-105 transition"
+            className="bg-white rounded-2xl shadow-lg p-4 w-28 hover:scale-105 transition"
             whileHover={{ scale: 1.1 }}
           >
-            <img src={skill.image} alt={skill.name} className="w-12 h-12 mb-2" />
-            <span className="text-gray-700 text-sm">{skill.name}</span>
+            <img src={skill.image} alt={skill.name} className="w-12 h-12 mx-auto mb-2" />
+            <span className="text-sm text-gray-800">{skill.name}</span>
           </motion.div>
         ))}
       </div>

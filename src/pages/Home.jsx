@@ -4,59 +4,40 @@ import profile from "../assets/profile.jpg";
 
 export default function Home() {
   return (
-    <section id="home" className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-br from-primary to-secondary text-white text-center p-8 space-y-8 md:space-y-0 md:space-x-8">
-      
-      <motion.img 
+    <section id="home" className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-primary to-secondary text-white px-8 py-16">
+      <motion.img
         src={profile}
         alt="Profile"
-        className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-white shadow-lg object-cover"
+        className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-white shadow-xl object-cover mb-8 md:mb-0"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
       />
 
-      <div>
-        <motion.h1 
-          className="text-4xl md:text-6xl font-bold mb-4"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Hi, I'm Shweta
-        </motion.h1>
-
-        <motion.p 
-          className="text-lg md:text-2xl mb-8 max-w-xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        >
-          A passionate frontend developer crafting beautiful & modern web apps.
-        </motion.p>
-
-        <motion.div className="flex flex-col md:flex-row gap-4 justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8 }}
-        >
-          <motion.a 
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        className="md:ml-8 text-center md:text-left"
+      >
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Shweta</h1>
+        <p className="text-lg md:text-2xl mb-6 max-w-xl">A frontend developer passionate about crafting modern, beautiful web apps.</p>
+        <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+          <a
             href="#projects"
-            className="bg-white text-primary px-6 py-3 rounded-full shadow hover:bg-gray-200"
-            whileHover={{ scale: 1.05 }}
+            className="bg-white text-primary px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition"
           >
             View My Work
-          </motion.a>
-
-          <motion.a 
+          </a>
+          <a
             href="/resume.pdf"
             download
-            className="flex items-center justify-center gap-2 bg-white text-primary px-6 py-3 rounded-full shadow hover:bg-gray-200"
-            whileHover={{ scale: 1.05 }}
+            className="flex items-center justify-center gap-2 bg-secondary text-white px-6 py-3 rounded-full shadow-md hover:bg-cyan-400 transition"
           >
             <FaDownload /> Download Resume
-          </motion.a>
-        </motion.div>
-      </div>
+          </a>
+        </div>
+      </motion.div>
     </section>
   );
 }
